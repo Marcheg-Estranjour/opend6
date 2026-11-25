@@ -1,0 +1,21 @@
+# Secrets et configuration locale
+.env
+*.local.*
+
+# Java / Maven
+backend/target/
+
+# Angular / Node
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+e2e/node_modules/
+e2e/test-results/
+e2e/playwright-report/
+
+# IDE et système
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
