@@ -19,3 +19,10 @@ e2e/playwright-report/
 .vscode/*
 !.vscode/extensions.json
 .DS_Store
+
+# Eclipse
+.classpath
+.project
+.settings/
+.factorypath
+EOF
