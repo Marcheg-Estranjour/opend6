@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
