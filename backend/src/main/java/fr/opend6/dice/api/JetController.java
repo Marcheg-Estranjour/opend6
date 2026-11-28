@@ -38,8 +38,8 @@ public class JetController {
     public record JetRequete(
             @NotBlank String code,
             @Min(1) Integer difficulte,
-            boolean pointDePersonnage,
-            boolean pointDeDestin) {
+            Boolean pointDePersonnage,
+            Boolean pointDeDestin) {
     }
 
     public record DeLibreDto(List<Integer> lancers, boolean echecCritique, boolean compte) {
@@ -66,7 +66,9 @@ public class JetController {
     @PostMapping
     public JetReponse lancer(@Valid @RequestBody JetRequete requete) {
         CodeDe code = CodeDe.parse(requete.code());
-        OptionsJet options = new OptionsJet(requete.pointDePersonnage(), requete.pointDeDestin());
+        OptionsJet options = new OptionsJet(
+                Boolean.TRUE.equals(requete.pointDePersonnage()),
+                Boolean.TRUE.equals(requete.pointDeDestin()));
         ResultatJet r = lanceur.lancer(code, options);
 
         ResolutionDto resolution = null;

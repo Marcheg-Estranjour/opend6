@@ -1,0 +1,14 @@
+spring:
+  config:
+    import:
+      # Lit le .env de la racine du dépôt, que l'on lance depuis backend/ ou depuis la racine
+      - optional:file:.env[.properties]
+      - optional:file:../.env[.properties]
+  datasource:
+    url: jdbc:postgresql://localhost:${DB_PORT:5432}/${DB_NAME:opend6}
+    username: ${DB_USER:opend6}
+    password: ${DB_PASSWORD}
+
+logging:
+  level:
+    fr.opend6: debug
