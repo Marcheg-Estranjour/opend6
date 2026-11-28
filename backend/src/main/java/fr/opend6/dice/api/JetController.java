@@ -1,12 +1,5 @@
-package fr.opend6.api;
+package fr.opend6.dice.api;
 
-import fr.opend6.regles.des.CodeDe;
-import fr.opend6.regles.des.DeLibre;
-import fr.opend6.regles.des.LanceurDeDes;
-import fr.opend6.regles.des.NiveauDifficulte;
-import fr.opend6.regles.des.OptionsJet;
-import fr.opend6.regles.des.Resolution;
-import fr.opend6.regles.des.ResultatJet;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -17,6 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import fr.opend6.dice.domain.CodeDe;
+import fr.opend6.dice.domain.DeLibre;
+import fr.opend6.dice.domain.LanceurDeDes;
+import fr.opend6.dice.domain.NiveauDifficulte;
+import fr.opend6.dice.domain.OptionsJet;
+import fr.opend6.dice.domain.Resolution;
+import fr.opend6.dice.domain.ResultatJet;
 
 import java.util.List;
 
@@ -37,8 +38,8 @@ public class JetController {
     public record JetRequete(
             @NotBlank String code,
             @Min(1) Integer difficulte,
-            boolean pointDePersonnage,
-            boolean pointDeDestin) {
+            Boolean pointDePersonnage,
+            Boolean pointDeDestin) {
     }
 
     public record DeLibreDto(List<Integer> lancers, boolean echecCritique, boolean compte) {
@@ -65,7 +66,9 @@ public class JetController {
     @PostMapping
     public JetReponse lancer(@Valid @RequestBody JetRequete requete) {
         CodeDe code = CodeDe.parse(requete.code());
-        OptionsJet options = new OptionsJet(requete.pointDePersonnage(), requete.pointDeDestin());
+        OptionsJet options = new OptionsJet(
+                Boolean.TRUE.equals(requete.pointDePersonnage()),
+                Boolean.TRUE.equals(requete.pointDeDestin()));
         ResultatJet r = lanceur.lancer(code, options);
 
         ResolutionDto resolution = null;

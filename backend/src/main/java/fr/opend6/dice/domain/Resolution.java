@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 /**
  * Résolution d'un jet face à un niveau de difficulté, avec niveau de réussite / d'échec (p.101).

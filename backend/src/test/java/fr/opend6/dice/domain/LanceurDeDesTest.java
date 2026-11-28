@@ -1,9 +1,18 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 import org.junit.jupiter.api.Test;
 
-import static fr.opend6.regles.des.PolitiqueEchecCritique.ANNULER_DE_LIBRE_ET_PLUS_HAUT;
-import static fr.opend6.regles.des.PolitiqueEchecCritique.COMPTER_ET_INCIDENT;
+import fr.opend6.dice.domain.CodeDe;
+import fr.opend6.dice.domain.DegreResultat;
+import fr.opend6.dice.domain.LanceurDeDes;
+import fr.opend6.dice.domain.NiveauDifficulte;
+import fr.opend6.dice.domain.OptionsJet;
+import fr.opend6.dice.domain.PolitiqueEchecCritique;
+import fr.opend6.dice.domain.Resolution;
+import fr.opend6.dice.domain.ResultatJet;
+
+import static fr.opend6.dice.domain.PolitiqueEchecCritique.ANNULER_DE_LIBRE_ET_PLUS_HAUT;
+import static fr.opend6.dice.domain.PolitiqueEchecCritique.COMPTER_ET_INCIDENT;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 

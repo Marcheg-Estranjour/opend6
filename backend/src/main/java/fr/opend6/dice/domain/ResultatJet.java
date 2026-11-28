@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 import java.util.List;
 

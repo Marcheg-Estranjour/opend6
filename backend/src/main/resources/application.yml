@@ -1,14 +1,19 @@
 spring:
   application:
     name: opend6
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
 
-server:
-  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info
 
 opend6:
-  # Règle de l'échec critique (D6 intégral p.98) :
-  #  ANNULER_DE_LIBRE_ET_PLUS_HAUT : le Dé Libre ne compte pas et annule le dé le plus élevé
-  #  COMPTER_ET_INCIDENT           : le Dé Libre compte normalement, le MJ déclenche un incident
-  echec-critique: ANNULER_DE_LIBRE_ET_PLUS_HAUT
-  # Origine autorisée pour le front Angular en développement
-  cors-origine: http://localhost:4200
+  dice:
+    critical-failure-rule: ANNULER_DE_LIBRE_ET_PLUS_HAUT
+  cors:
+    allowed-origin: http://localhost:4200
