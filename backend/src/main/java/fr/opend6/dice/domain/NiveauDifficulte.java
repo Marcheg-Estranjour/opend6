@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 /**
  * Échelle des niveaux de difficulté (D6 intégral p.93).

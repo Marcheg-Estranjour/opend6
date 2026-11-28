@@ -3,6 +3,8 @@ package fr.opend6.regles.des;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+import fr.opend6.dice.domain.SourceAleatoire;
+
 /** Source de dés déterministe pour les tests : renvoie les valeurs dans l'ordre donné. */
 final class DesScriptes implements SourceAleatoire {
 

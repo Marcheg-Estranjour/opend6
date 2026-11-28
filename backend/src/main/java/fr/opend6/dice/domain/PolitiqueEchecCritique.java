@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 /**
  * Les deux options proposées par le D6 intégral (p.98) quand le Dé Libre fait 1 au premier lancer.

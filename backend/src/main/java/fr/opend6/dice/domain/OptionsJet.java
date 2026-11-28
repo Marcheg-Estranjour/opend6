@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 /**
  * Options décidées par le joueur AVANT le jet (p.98).

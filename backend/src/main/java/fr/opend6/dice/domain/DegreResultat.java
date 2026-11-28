@@ -1,4 +1,4 @@
-package fr.opend6.regles.des;
+package fr.opend6.dice.domain;
 
 /**
  * Niveaux de réussite et d'échec (D6 intégral p.101), selon l'écart entre le jet et la difficulté.

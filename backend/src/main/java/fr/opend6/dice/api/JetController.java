@@ -1,12 +1,5 @@
-package fr.opend6.api;
+package fr.opend6.dice.api;
 
-import fr.opend6.regles.des.CodeDe;
-import fr.opend6.regles.des.DeLibre;
-import fr.opend6.regles.des.LanceurDeDes;
-import fr.opend6.regles.des.NiveauDifficulte;
-import fr.opend6.regles.des.OptionsJet;
-import fr.opend6.regles.des.Resolution;
-import fr.opend6.regles.des.ResultatJet;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -17,6 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import fr.opend6.dice.domain.CodeDe;
+import fr.opend6.dice.domain.DeLibre;
+import fr.opend6.dice.domain.LanceurDeDes;
+import fr.opend6.dice.domain.NiveauDifficulte;
+import fr.opend6.dice.domain.OptionsJet;
+import fr.opend6.dice.domain.Resolution;
+import fr.opend6.dice.domain.ResultatJet;
 
 import java.util.List;
 
